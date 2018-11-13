@@ -1,11 +1,11 @@
-#!/bin/bash
+!/bin/bash
 set -e
 set -x
 # Installation --------------------------------------------------------------- #
 disk="/dev/sda"   # specify the usb drive using
 mnt="/mnt/drive"  # temporary mount point
-adminUser="admin"
-adminPassword="admin@123"
+admin_user="vagrant"
+admin_passwd="vagrant"
 
 # Preparing the USB Drive ---------------------------------------------------- #
 # Zero Fill Boot sector and create partition tables
@@ -98,10 +98,10 @@ pacman -S --noconfirm --needed grml-zsh-config zsh-completions
 #Change Root shell
 #chsh -s /usr/bin/zsh
 # Admin User with password less sudo and zsh
-useradd -m $adminUser -s /usr/bin/zsh
-echo "$adminUser":"$adminPassword" | chpasswd
-echo "$adminUser ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$adminUser
-chmod 0440 /etc/sudoers.d/$adminUser
+useradd -m $admin_user -s /usr/bin/zsh
+echo "$admin_user":"$admin_passwd" | chpasswd
+echo "$admin_user ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$admin_user
+chmod 0440 /etc/sudoers.d/$admin_user
 
 # Exit
 exit
