@@ -2,7 +2,10 @@
 
 # Gui
 pacman -S i3-gaps xorg-server xorg-apps xorg-xinit ttf-dejavu ttf-inconsolata --noconfirm --needed
-echo "exec i3" > ~/.xinitrc
+echo "
+xsetroot -solid "#333333"
+feh --bg-fill ~/.config/wall.jpg
+exec i3" > ~/.xinitrc
 
 
 ##
