@@ -1,11 +1,19 @@
 #!/bin/bash
 
 # Gui
-pacman -S i3 dmenu xorg-server xorg-apps xorg-xinit --noconfirm --needed
-echo "#! /bin/bash
-exec i3" > ~/.xinitrc
+pacman -S i3-gaps xorg-server xorg-apps xorg-xinit ttf-dejavu ttf-inconsolata --noconfirm --needed
+echo "exec i3" > ~/.xinitrc
 
-# terminal
+
+##
+# Use `feh` to define a background picture for your desktop.
+# Use a compositor manager such as `compton` to enable effects like window fading and transparency.
+# Use `dmenu` or `rofi` to enable customizable menus that can be launched from a keyboard shortcut.
+# Use `dunst` for desktop notifications.
+##
+
+
+# terminal echo -e "\033(0"
 pacman -S rxvt-unicode rxvt-unicode-terminfo
 
 # Intalling Aura
