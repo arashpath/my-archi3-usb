@@ -37,8 +37,8 @@ URxvt.letterSpace: -1
 
 ! Tango theme
 
-URxvt.background: #1C1C1C
-URxvt.foreground: #DEDEDE
+!URxvt.background: #1C1C1C
+!URxvt.foreground: #DEDEDE
 
 ! black
 URxvt.color0  : #2E3436
