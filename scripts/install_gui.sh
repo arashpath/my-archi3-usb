@@ -9,8 +9,8 @@ sudo pacman -S i3 xorg-server xorg-apps xorg-xinit compton \
 # Setup for StartX
 echo 'exec i3' > ~/.xinitrc
 
-# Little tools (~3MB, ~10MB)
-sudo pacman -S elinks neofetch wget htop --noconfirm --needed
+# Mini tools (~3MB, ~10MB)
+sudo pacman -S elinks neofetch wget htop rsync tree --noconfirm --needed
 
 # Terminal Emulator (~1MB, ~4MB)
 sudo pacman -S rxvt-unicode --noconfirm --needed
@@ -18,10 +18,22 @@ wget "$myrepo/dotfiles/.Xdefaults" -O ~/.Xdefaults
 
 # Wallpaper (~4MB, ~13MB)
 bg_url="https://tweakers.net/ext/f/ph5BxUGTgCHBPHXMJ2bn4h5C/full.jpg"
-sudo pacman -S feh wget --noconfirm --needed
+sudo pacman -S feh --noconfirm --needed
 wget -O ~/.config/wall.jpg -c $bg_url
 echo "# Set Wallpaper
 exec --no-startup-id feh --bg-fill ~/.config/wall.jpg" >> ~/.config/i3/config
+
+
+
+
+
+
+
+
+https://raw.githubusercontent.com/Airblader/dotfiles-manjaro/master/.compton.conf
+
+
+
 
 
 # Python
@@ -43,12 +55,6 @@ sudo pacman -S python-pywal iotop ranger --noconfirm --needed
 # Intalling Aura
 pacman -S base-devel  git # ~50 MB
 
-
-# Python
-sudo pacman -S python --noconfirm --needed 
-
-# tools 
-sudo pacman -S python-pywal iotop ranger --noconfirm --needed
 
 
 
